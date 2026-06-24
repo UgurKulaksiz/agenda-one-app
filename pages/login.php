@@ -1,17 +1,17 @@
 <div class="login-container">
     <div class="content-container">
-        <div class="content">
-            <form action="" method="post" id="loginForm">
+        <div class="login-content">
+            <form action="" method="post" id="loginForm" class="login-form">
                 <h2 class="login-title">Connectez-vous</h2>
-                <div>
-                    <i></i>
-                    <input class="login-input" type="email" name="email_client" id="email_connexion" 
-                    placeholder="E-mail" required />
+                <div class="login-input-container">
+                    <i class="login-icon fas fa-user"></i>
+                    <input class="login-input" type="email" name="email_client" id="email_connexion"
+                        placeholder="E-mail" required />
                 </div>
-                <div>
-                    <i></i>
+                <div class="login-input-container">
+                    <i class="login-icon fas fa-lock"></i>
                     <input class="login-input" type="password" name="password" id="password_connexion"
-                    placeholder="Mot de passe" required />
+                        placeholder="Mot de passe" required />
                     <i class="fas fa-eye" onclick="showPassword(this)"></i>
                 </div>
 
@@ -19,12 +19,12 @@
                     <span class="button_text">Se connecter</span>
                     <i class="button_icon fas fa-chevron-right"></i>
                 </button>
-                <button class="button sign-up" type="submit" name="submit_login">
+                <a class="button sign-up" href="index.php?page=sign_up.php">
                     <p>Pas encore de compte ?
-                        <span class="button_text"><a href="index.php?page=sign_up.php">S'inscrire</a></span>
+                        <span class="button_text">S'inscrire</span>
                     </p>
                     <i class="button_icon fas fa-chevron-right"></i>
-                </button>
+                </a>
             </form>
         </div>
     </div>
