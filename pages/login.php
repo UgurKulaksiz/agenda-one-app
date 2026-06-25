@@ -4,7 +4,7 @@
             <form action="" method="post" id="loginForm" class="login-form">
                 <h2 class="login-title">Connectez-vous</h2>
                 <div class="login-input-container">
-                    <i class="login-icon fas fa-user"></i>
+                    <i class="login-icon fa-solid fa-envelope"></i>
                     <input class="login-input" type="email" name="email_client" id="email_connexion"
                         placeholder="E-mail" required />
                 </div>
@@ -40,7 +40,7 @@
             icon.classList.add('fa-eye-slash');
         } else {
             passwordInput.type = 'password';
-            icon.classList.remove('fa-ey-slash');
+            icon.classList.remove('fa-eye-slash');
             icon.classList.add('fa-eye');
         }
     }

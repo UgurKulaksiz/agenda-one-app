@@ -30,7 +30,6 @@ div.login-content form.login-form {
 
 h2.login-title {
     margin: 0 0 25px 0;
-    ;
     font-size: 1.8rem;
     font-weight: 700;
 }
@@ -103,6 +102,22 @@ div.login-input-container i.fas.fa-eye-slash {
     color: #1e3a8a;
 }
 
+.sign-up:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+    color: whitesmoke;
+}
+
+.sign-up:hover .button_text, 
+.sign-up:hover a {
+    color: whitesmoke;
+}
+
+/* FORMULAIRE D'INSCRIPTION */
+.reset-submit {
+    background: rgba(255, 255, 255, 0.14);
+    color: white;
+}
+
 .sign-up {
     background: rgba(255, 255, 255, 0.14);
     color: white;
@@ -122,13 +137,13 @@ div.login-input-container i.fas.fa-eye-slash {
     font-weight: 600;
 }
 
-.sign-up:hover {
+.reset-submit:hover {
     background-color: rgba(255, 255, 255, 0.14);
     color: whitesmoke;
 }
 
-.sign-up:hover .button_text, 
-.sign-up:hover a {
+.reset-submit:hover .button_text, 
+.reset-submit:hover a {
     color: whitesmoke;
 }
 
