@@ -1,7 +1,7 @@
 <div class="home-container">
     <div class="home-title">
         <h1>Bienvenue sur AgendaOne</h1>
-        <p>Planifiez vos rendez-vous facilement et rapidement.</p>
+        <p>Planifiez vos événements facilement et rapidement.</p>
     </div>
 
     <div class="calendar-container">
@@ -13,7 +13,7 @@
         </div>
 
         <div class="calendar-rdv-link">
-            <p><a href="index.php?page=formulaire_rdv.php">Planifier un rendez-vous</a></p>
+            <p><a href="index.php?page=formulaire_evenement.php">Planifier un événement</a></p>
         </div>
     </div>
 </div>

@@ -79,7 +79,7 @@ main.wrapper {
 }
 
 /* FORMULAIRE DE RDV */
-div.appointment-container {
+div.event-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,7 +91,7 @@ div.content-container {
     max-width: 420px;
 }
 
-div.appointment-content {
+div.event-content {
     width: 120%;
     background: linear-gradient(180deg, #2563eb, #1e3a8a);
     color: white;
@@ -104,23 +104,23 @@ div.appointment-content {
     text-align: center;
 }
 
-div.appointment-content form.appointment-form {
+div.event-content form.event-form {
     width: 100%;
 }
 
-h2.appointment-title {
+h2.event-title {
     margin: 0 0 25px 0;
     ;
     font-size: 1.8rem;
     font-weight: 700;
 }
 
-div.appointment-input-container {
+div.event-input-container {
     position: relative;
     margin-bottom: 16px;
 }
 
-i.appointment-icon:first-child {
+i.event-icon:first-child {
     position: absolute;
     left: 14px;
     top: 50%;
@@ -128,7 +128,7 @@ i.appointment-icon:first-child {
     transform: translateY(-50%);
 }
 
-input.appointment-input {
+input.event-input {
     width: 100%;
     box-sizing: border-box;
     padding: 12px 45px 12px 42px;
@@ -140,27 +140,27 @@ input.appointment-input {
     color: white;
 }
 
-input.appointment-input::placeholder {
+input.event-input::placeholder {
     color: #6b7280;
 }
 
-input.appointment-input[type="date"],
-input.appointment-input[type="time"] {
+input.event-input[type="date"],
+input.event-input[type="time"] {
     color-scheme: white;
 }
 
-input.appointment-input[type="date"]::-webkit-calendar-picker-indicator,
-input.appointment-input[type="time"]::-webkit-calendar-picker-indicator {
+input.event-input[type="date"]::-webkit-calendar-picker-indicator,
+input.event-input[type="time"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
     opacity: 1;
     filter: invert(1);
 }
 
-input.appointment-input:focus {
+input.event-input:focus {
     border-color: #fff;
 }
 
-.appointment-submit {
+.event-submit {
     background: #fff;
     color: #1e3a8a;
 }
