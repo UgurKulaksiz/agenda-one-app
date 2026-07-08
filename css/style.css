@@ -1,4 +1,4 @@
-/* BODY */
+/****** BODY *****/
 body {
     margin: 0;
     min-height: 100vh;
@@ -9,76 +9,186 @@ body {
     color: black;
 }
 
-/* CORPS DU SITE */
+/***** CORPS DU SITE *****/
 main.wrapper {
     flex: 1;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
-/* ACCUEIL */
+/***** ACCUEIL *****/
 .home-container {
-    margin-bottom: 20%;
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 10px 0 30px;
 }
 
-.home-title {
-    text-align: center;
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 22px;
+    padding: 36px;
+    min-height: 300px;
 }
 
-.calendar-container {
-    width: 700px;
-    background: linear-gradient(180deg, #2563eb, #1e3a8a);
+.hero-copy h1 {
+    margin: 0;
+    font-size: 1.9rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #222;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-copy p {
+    margin: 0 0 12px;
+    color: #444;
+    line-height: 1.6;
+    font-size: 1rem;
+    max-width: 560px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home-btn.primary {
+    background: #2563eb;
     color: white;
-    border-radius: 20px;
-    padding: 20px 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.home-btn.secondary {
+    background: white;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+}
+
+.hero-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.calendar-card {
+    background: linear-gradient(180deg, #1e3a8a, #2563eb);
+    color: white;
+    border-radius: 22px;
+    padding: 24px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
+    max-width: 520px;
+    min-height: 320px;
+    justify-content: center;
 }
 
 .calendar-header {
-    font-size: 2rem;
     margin-bottom: 10px;
 }
 
 .calendar-logo {
-    width: 70%;
-    height: 35%;
+    width: 100%;
+    height: auto;
+    max-width: 350px;
     margin-bottom: 10px;
+    border-radius: 22px;
 }
 
-.calendar-month-day {
-    font-size: 2rem;
+.calendar-date {
+    font-size: 1.2rem;
     font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.95;
+    margin-bottom: 6px;
 }
 
-.calendar-rdv-link {
-    margin-top: 15px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 8px 16px;
-    border: none;
-    transition: all 0.3s ease;
+.calendar-caption {
+    margin: 0;
+    font-size: 0.95rem;
 }
 
-.calendar-rdv-link a {
-    color: white;
+.home-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
 }
 
-.calendar-rdv-link:hover {
+.feature-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 22px;
+    padding: 16px;
+}
+
+.feature-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
+    transition: all 0.2s ease;
 }
 
-/* FORMULAIRE DE RDV */
+.feature-card h3 {
+    margin-bottom: 6px;
+    color: #222;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    letter-spacing: 0.05em;
+}
+
+.feature-card p {
+    margin: 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+
+    .home-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-section {
+        padding: 18px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .home-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/***** FORMULAIRE DE RDV *****/
 div.event-container {
     display: flex;
     justify-content: center;
@@ -112,6 +222,8 @@ h2.event-title {
     margin: 0 0 25px 0;
     font-size: 1.8rem;
     font-weight: 700;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    letter-spacing: 0.05em;
     text-align: center;
     width: 100%;
 }
@@ -146,7 +258,7 @@ i.event-icon:first-child {
     transform: translateY(-50%);
 }
 
-input.event-input, 
+input.event-input,
 textarea.event-input {
     width: 100%;
     box-sizing: border-box;
@@ -176,7 +288,7 @@ input.event-input[type="time"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
 }
 
-input.event-input:focus, 
+input.event-input:focus,
 textarea.event-input:focus {
     background: rgba(255, 255, 255, 0.22);
 }
@@ -186,10 +298,7 @@ textarea.event-input:focus {
     color: #1e3a8a;
 }
 
-/* ==========================
-   TABLEAU DE BORD - MON AGENDA
-   ========================== */
-
+/***** TABLEAU DE BORD - MON AGENDA *****/
 /* Conteneur principal */
 .agenda-dashboard {
     width: 100%;
@@ -221,8 +330,11 @@ textarea.event-input:focus {
 
 .dashboard-title {
     margin: 0;
-    font-size: 1.6rem;
+    font-size: 1.75rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
     color: #222;
+    letter-spacing: 0.05em;
+    font-weight: 700;
 }
 
 .dashboard-subtitle {
@@ -239,7 +351,7 @@ textarea.event-input:focus {
 
 .dashboard-btn {
     padding: 8px 12px;
-    border-radius: 4px;
+    border-radius: 22px;
 }
 
 /* Cartes statistiques */
@@ -252,6 +364,7 @@ textarea.event-input:focus {
 .stat-card {
     background: #ffffff;
     border: 1px solid #ddd;
+    border-radius: 22px;
     padding: 14px;
     display: flex;
     align-items: center;
@@ -306,6 +419,7 @@ textarea.event-input:focus {
 .dashboard-panel {
     background: #ffffff;
     border: 1px solid #ddd;
+    border-radius: 22px;
     padding: 16px;
 }
 
@@ -323,8 +437,11 @@ textarea.event-input:focus {
 
 .panel-header h2 {
     margin: 0;
-    font-size: 1rem;
-    color: #222;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.25rem;
+    color: #1f2937;
+    letter-spacing: 0.05em;
+    font-weight: 700;
 }
 
 .badge {
@@ -350,30 +467,6 @@ textarea.event-input:focus {
     margin-top: 10px;
 }
 
-/* Liste résumé */
-.dashboard-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.dashboard-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 6px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.dashboard-list li:last-child {
-    border-bottom: none;
-}
-
-.panel-link {
-    color: #2563eb;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
 /* Tableau */
 .dashboard-table {
     width: 100%;
@@ -397,55 +490,64 @@ textarea.event-input:focus {
     padding: 6px 12px;
     font-size: 0.9rem;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 22px;
     border: 1px solid #ccc;
     outline: none;
     cursor: pointer;
     transition: all 0.2s ease;
 }
+
 /* --- Styles dynamiques du SELECT (selon le statut sélectionné) --- */
 .status-select.status-1 {
     background-color: #dbeafe;
     color: #1e40af;
     font-weight: bold;
 }
+
 .status-select.status-2 {
     background-color: #fef3c7;
     color: #92400e;
     font-weight: bold;
 }
+
 .status-select.status-3 {
     background-color: #dcfce7;
     color: #166534;
     font-weight: bold;
 }
+
 .status-select.status-4 {
     background-color: #fef2f2;
     color: #991b1b;
     font-weight: bold;
 }
+
 /* --- Styles individuels des OPTIONS dans la liste déroulante --- */
 .status-select option[value="1"] {
     background-color: #dbeafe;
     color: #1e40af;
     font-weight: bold;
 }
+
 .status-select option[value="2"] {
     background-color: #fef3c7;
     color: #92400e;
     font-weight: bold;
 }
+
 .status-select option[value="3"] {
     background-color: #dcfce7;
     color: #166534;
     font-weight: bold;
 }
+
 .status-select option[value="4"] {
     background-color: #fef2f2;
     color: #991b1b;
     font-weight: bold;
 }
 
+/* Boutons d'action dans l'agenda */
 .agenda-action-link {
     color: #2563eb;
     text-decoration: none;
@@ -455,25 +557,6 @@ textarea.event-input:focus {
 
 .agenda-action-link.danger {
     color: #c0392b;
-}
-
-.status-pill {
-    display: inline-block;
-    padding: 4px 8px;
-    font-size: 0.8rem;
-    background: #eee;
-}
-
-.status-upcoming {
-    background: #dbeafe;
-}
-
-.status-pending {
-    background: #fef3c7;
-}
-
-.status-done {
-    background: #dcfce7;
 }
 
 /* Responsive simple */
@@ -499,7 +582,7 @@ textarea.event-input:focus {
 }
 
 
-/* FOOTER */
+/***** FOOTER *****/
 .footer {
     border-top: 1px solid black;
     background: linear-gradient(360deg, #1e3a8a, #2563eb);
