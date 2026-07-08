@@ -3,25 +3,26 @@
         <div class="event-content">
             <form action="" method="post" id="eventForm" class="event-form">
                 <h2 class="event-title">Ajoutez un événement dans votre agenda</h2>
+
                 <div class="event-input-container">
-                    <input class="event-input" type="text" name="lastName" id="last_name" placeholder="Nom"
-                        required />
-                </div>
-                <div class="event-input-container">
-                    <input class="event-input" type="text" name="firstName" id="first_name" placeholder="Prénom"
-                        required />
-                </div>
-                <div class="event-input-container">
+                    <label class="event-label" for="title_event">Titre <span class="required-mark">*</span> :</label>
                     <input class="event-input" type="text" name="title_event" id="title_event" placeholder="Titre de l'événement"
                         required />
                 </div>
+
                 <div class="event-input-container">
-                    <input class="event-input" type="date" name="date_event" id="date_event"
-                        placeholder="Date du rendez-vous" required />
+                    <label class="event-label" for="start_date">Début <span class="required-mark">*</span> :</label>
+                    <input class="event-input" type="datetime-local" name="start_date" id="start_date" required />
                 </div>
+
                 <div class="event-input-container">
-                    <input class="event-input" type="time" name="time_event" id="time_event"
-                        placeholder="Heure du rendez-vous" required />
+                    <label class="event-label" for="end_date">Fin <span class="required-mark">*</span> :</label>
+                    <input class="event-input" type="datetime-local" name="end_date" id="end_date" required />
+                </div>
+
+                <div class="event-input-container">
+                    <label class="event-label" for="description_event">Description :</label>
+                    <textarea class="event-input event-textarea" name="description_event" id="description_event" placeholder="Description de l'événement (optionnel)"></textarea>
                 </div>
 
                 <button class="button event-submit" type="submit" name="submit_sign-up">
