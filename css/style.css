@@ -188,7 +188,6 @@ textarea.event-input:focus {
 
 /* ==========================
    TABLEAU DE BORD - MON AGENDA
-   Version simple et claire, style débutant.
    ========================== */
 
 /* Conteneur principal */
@@ -393,10 +392,64 @@ textarea.event-input:focus {
     padding: 30px 20px;
 }
 
+/* Liste déroulante des statuts */
+.status-select {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+/* --- Styles dynamiques du SELECT (selon le statut sélectionné) --- */
+.status-select.status-1 {
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-weight: bold;
+}
+.status-select.status-2 {
+    background-color: #fef3c7;
+    color: #92400e;
+    font-weight: bold;
+}
+.status-select.status-3 {
+    background-color: #dcfce7;
+    color: #166534;
+    font-weight: bold;
+}
+.status-select.status-4 {
+    background-color: #fef2f2;
+    color: #991b1b;
+    font-weight: bold;
+}
+/* --- Styles individuels des OPTIONS dans la liste déroulante --- */
+.status-select option[value="1"] {
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-weight: bold;
+}
+.status-select option[value="2"] {
+    background-color: #fef3c7;
+    color: #92400e;
+    font-weight: bold;
+}
+.status-select option[value="3"] {
+    background-color: #dcfce7;
+    color: #166534;
+    font-weight: bold;
+}
+.status-select option[value="4"] {
+    background-color: #fef2f2;
+    color: #991b1b;
+    font-weight: bold;
+}
+
 .agenda-action-link {
     color: #2563eb;
     text-decoration: none;
-    margin-right: 8px;
+    margin-right: 16px;
     font-size: 0.9rem;
 }
 

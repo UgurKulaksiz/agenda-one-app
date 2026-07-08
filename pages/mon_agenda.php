@@ -47,6 +47,7 @@
                         <th>Début</th>
                         <th>Fin</th>
                         <th>Description</th>
+                        <th>Statut</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -57,8 +58,20 @@
                         <td>08/07/2026 16:00</td>
                         <td>Présentation du projet</td>
                         <td>
-                            <a href="#" class="agenda-action-link">Modifier</a>
-                            <a href="#" class="agenda-action-link danger">Supprimer</a>
+                            <select class="status-select status-1">
+                                <option value="1" selected>À venir</option>
+                                <option value="2">En cours</option>
+                                <option value="3">Terminé</option>
+                                <option value="4">Annulé</option>
+                            </select>
+                        </td>
+                        <td>
+                            <a href="#" class="agenda-action-link" title="Modifier">
+                                <i class="fa-solid fa-pen"></i>
+                            </a>
+                            <a href="#" class="agenda-action-link danger" title="Supprimer">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
                         </td>
                     </tr>
                     <tr>
@@ -66,9 +79,21 @@
                         <td>10/07/2026 09:00</td>
                         <td>10/07/2026 12:00</td>
                         <td>Formation sur l’outil</td>
+                         <td>
+                            <select class="status-select status-1">
+                                <option value="1" selected>À venir</option>
+                                <option value="2">En cours</option>
+                                <option value="3">Terminé</option>
+                                <option value="4">Annulé</option>
+                            </select>
+                        </td>
                         <td>
-                            <a href="#" class="agenda-action-link">Modifier</a>
-                            <a href="#" class="agenda-action-link danger">Supprimer</a>
+                            <a href="#" class="agenda-action-link" title="Modifier">
+                                <i class="fa-solid fa-pen"></i>
+                            </a>
+                            <a href="#" class="agenda-action-link danger" title="Supprimer">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
                         </td>
                     </tr>
                     <tr>
@@ -76,9 +101,21 @@
                         <td>12/07/2026 10:00</td>
                         <td>12/07/2026 11:00</td>
                         <td>Démo avec un client</td>
+                         <td>
+                            <select class="status-select status-1">
+                                <option value="1" selected>À venir</option>
+                                <option value="2">En cours</option>
+                                <option value="3">Terminé</option>
+                                <option value="4">Annulé</option>
+                            </select>
+                        </td>
                         <td>
-                            <a href="#" class="agenda-action-link">Modifier</a>
-                            <a href="#" class="agenda-action-link danger">Supprimer</a>
+                            <a href="#" class="agenda-action-link" title="Modifier">
+                                <i class="fa-solid fa-pen"></i>
+                            </a>
+                            <a href="#" class="agenda-action-link danger" title="Supprimer">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
                         </td>
                     </tr>
                 </tbody>
@@ -86,3 +123,18 @@
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const statusSelects = document.querySelectorAll(".status-select");
+
+        statusSelects.forEach(s => {
+            s.addEventListener("change", function () {
+                // Supprime les anciennes classes de statut
+                this.className = "status-select";
+                // Ajoute la classe correspondant à la nouvelle valeur choisie
+                this.classList.add("status-" + this.value);
+            })
+        });
+    });
+</script>
