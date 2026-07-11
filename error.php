@@ -1,7 +1,9 @@
+<?php require_once './lang.php'; ?>
+
 <section class="error-page">
     <div class="error-card">
-        <h1>Erreur 404</h1>
-        <p>La page que vous recherchez est introuvable.</p>
-        <a href="index.php?page=home.php">Retour à l'accueil</a>
+        <h1><?php echo $texts['error_title']; ?></h1>
+        <p><?php echo $texts['error_message']; ?></p>
+        <a href="index.php?page=home.php&amp;lang=<?php echo $lang; ?>"><?php echo $texts['error_back_home']; ?></a>
     </div>
 </section>

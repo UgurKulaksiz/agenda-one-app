@@ -1,13 +1,15 @@
+<?php require_once './lang.php'; ?>
+
 <section class="agenda-dashboard">
     <div class="dashboard-header">
         <div>
-            <p class="dashboard-eyebrow">Gestion</p>
-            <h1 class="dashboard-title">Mon agenda</h1>
-            <p class="dashboard-subtitle">Voici la liste de vos événements. Vous pouvez ajouter, modifier ou supprimer un rendez-vous.</p>
+            <p class="dashboard-eyebrow"><?php echo $texts['agenda_management']; ?></p>
+            <h1 class="dashboard-title"><?php echo $texts['agenda_title']; ?></h1>
+            <p class="dashboard-subtitle"><?php echo $texts['agenda_subtitle']; ?></p>
         </div>
         <div class="dashboard-actions">
-            <a href="index.php?page=formulaire_evenement.php" class="btn btn-primary dashboard-btn">
-                <i class="fa-solid fa-plus"></i> Ajouter un événement
+            <a href="index.php?page=formulaire_evenement.php&amp;lang=<?php echo $lang; ?>" class="btn btn-primary dashboard-btn">
+                <i class="fa-solid fa-plus"></i> <?php echo $texts['agenda_add_event']; ?>
             </a>
         </div>
     </div>
@@ -19,7 +21,7 @@
             </div>
             <div>
                 <h3>3</h3>
-                <p>Événements</p>
+                <p><?php echo $texts['agenda_events']; ?></p>
             </div>
         </div>
 
@@ -29,26 +31,26 @@
             </div>
             <div>
                 <h3>2</h3>
-                <p>À venir</p>
+                <p><?php echo $texts['agenda_upcoming']; ?></p>
             </div>
         </div>
     </div>
 
     <div class="dashboard-panel">
         <div class="panel-header">
-            <h2>Liste des événements</h2>
+            <h1><?php echo $texts['agenda_list_title']; ?></h1>
         </div>
 
         <div class="table-responsive">
             <table class="table dashboard-table">
                 <thead>
                     <tr>
-                        <th>Titre</th>
-                        <th>Début</th>
-                        <th>Fin</th>
-                        <th>Description</th>
-                        <th>Statut</th>
-                        <th>Actions</th>
+                        <th><?php echo $texts['agenda_table_title']; ?></th>
+                        <th><?php echo $texts['agenda_table_start']; ?></th>
+                        <th><?php echo $texts['agenda_table_end']; ?></th>
+                        <th><?php echo $texts['agenda_table_description']; ?></th>
+                        <th><?php echo $texts['agenda_table_status']; ?></th>
+                        <th><?php echo $texts['agenda_table_actions']; ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -59,17 +61,17 @@
                         <td>Présentation du projet</td>
                         <td>
                             <select class="status-select status-1">
-                                <option value="1" selected>À venir</option>
-                                <option value="2">En cours</option>
-                                <option value="3">Terminé</option>
-                                <option value="4">Annulé</option>
+                                <option value="1" selected><?php echo $texts['agenda_status_upcoming']; ?></option>
+                                <option value="2"><?php echo $texts['agenda_status_in_progress']; ?></option>
+                                <option value="3"><?php echo $texts['agenda_status_done']; ?></option>
+                                <option value="4"><?php echo $texts['agenda_status_cancelled']; ?></option>
                             </select>
                         </td>
                         <td>
-                            <a href="#" class="agenda-action-link" title="Modifier">
+                            <a href="#" class="agenda-action-link" title="<?php echo $texts['agenda_action_edit']; ?>">
                                 <i class="fa-solid fa-pen"></i>
                             </a>
-                            <a href="#" class="agenda-action-link danger" title="Supprimer">
+                            <a href="#" class="agenda-action-link danger" title="<?php echo $texts['agenda_action_delete']; ?>">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
                         </td>
@@ -81,17 +83,17 @@
                         <td>Formation sur l’outil</td>
                          <td>
                             <select class="status-select status-1">
-                                <option value="1" selected>À venir</option>
-                                <option value="2">En cours</option>
-                                <option value="3">Terminé</option>
-                                <option value="4">Annulé</option>
+                                <option value="1" selected><?php echo $texts['agenda_status_upcoming']; ?></option>
+                                <option value="2"><?php echo $texts['agenda_status_in_progress']; ?></option>
+                                <option value="3"><?php echo $texts['agenda_status_done']; ?></option>
+                                <option value="4"><?php echo $texts['agenda_status_cancelled']; ?></option>
                             </select>
                         </td>
                         <td>
-                            <a href="#" class="agenda-action-link" title="Modifier">
+                            <a href="#" class="agenda-action-link" title="<?php echo $texts['agenda_action_edit']; ?>">
                                 <i class="fa-solid fa-pen"></i>
                             </a>
-                            <a href="#" class="agenda-action-link danger" title="Supprimer">
+                            <a href="#" class="agenda-action-link danger" title="<?php echo $texts['agenda_action_delete']; ?>">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
                         </td>
@@ -103,17 +105,17 @@
                         <td>Démo avec un client</td>
                          <td>
                             <select class="status-select status-1">
-                                <option value="1" selected>À venir</option>
-                                <option value="2">En cours</option>
-                                <option value="3">Terminé</option>
-                                <option value="4">Annulé</option>
+                                <option value="1" selected><?php echo $texts['agenda_status_upcoming']; ?></option>
+                                <option value="2"><?php echo $texts['agenda_status_in_progress']; ?></option>
+                                <option value="3"><?php echo $texts['agenda_status_done']; ?></option>
+                                <option value="4"><?php echo $texts['agenda_status_cancelled']; ?></option>
                             </select>
                         </td>
                         <td>
-                            <a href="#" class="agenda-action-link" title="Modifier">
+                            <a href="#" class="agenda-action-link" title="<?php echo $texts['agenda_action_edit']; ?>">
                                 <i class="fa-solid fa-pen"></i>
                             </a>
-                            <a href="#" class="agenda-action-link danger" title="Supprimer">
+                            <a href="#" class="agenda-action-link danger" title="<?php echo $texts['agenda_action_delete']; ?>">
                                 <i class="fa-solid fa-trash"></i>
                             </a>
                         </td>

@@ -1,5 +1,7 @@
+<?php require_once './lang.php'; ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $lang === 'en' ? 'en' : 'fr'; ?>">
 
 <head>
     <meta charset="UTF-8">
@@ -33,8 +35,6 @@
 
     <main class="wrapper">
         <?php
-        session_start();
-
         $page = isset($_GET['page']) ? $_GET['page'] : 'home.php';
         $_SESSION['page'] = $page;
 
@@ -49,10 +49,18 @@
 
     <footer class="footer">
         <div class="footer-container">
-            <div class="row">
-                <p>&copy; <span id="currentYear"></span> AgendaOne. Tous droits réservés.</p>
+            <div class="footer-center">
+                <p>&copy; <span id="currentYear"></span> AgendaOne. <?php echo $texts['footer']; ?></p>
             </div>
-        </div>
+
+            <div class="footer-right">
+                <div class="language-switcher">
+                    <select class="language-select" onchange="changeLanguage(this.value)">
+                        <option value="fr" <?php echo $lang === 'fr' ? 'selected' : ''; ?>>FR</option>
+                        <option value="en" <?php echo $lang === 'en' ? 'selected' : ''; ?>>EN</option>
+                    </select>
+                </div>
+            </div>
     </footer>
 
 </body>
@@ -62,4 +70,11 @@
 <script>
     // Affiche l'année en cours dans le pied de page
     document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Fonction pour changer la langue
+    function changeLanguage(lang) {
+        const params = new URLSearchParams(location.search); // Récupère les paramètres de l'URL
+        params.set('lang', lang); // Met à jour le paramètre 'lang' avec la nouvelle valeur
+        location.href = location.pathname + '?' + params.toString(); // Redirige vers la même page avec le nouveau paramètre de langue
+    }
 </script>
