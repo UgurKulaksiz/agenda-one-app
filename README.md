@@ -1,4 +1,4 @@
-# 📅 AgendaOne - Gestion d'événement en ligne
+# 📅 AgendaOne - Gestion d'événements en ligne
 
 ## 📝 Description
 Ce projet est une application web de productivité développée en PHP permettant de gérer son emploi du temps en ligne. L'objectif est de mettre en place une interface moderne et élégante pour planifier, organiser et suivre ses événements personnels ou professionnels de manière simple et intuitive.
@@ -12,5 +12,7 @@ Ce projet est une application web de productivité développée en PHP permettan
 ## 🛠️ Technologies utilisées
 - **Backend** : PHP
 - **Frontend** : HTML5, CSS3, JavaScript
+- **Bibliothèques UI** : Bootstrap 5, FontAwesome 6
+- **Base de données** : PostgreSQL
 - **Serveur local** : Laragon
 - **Gestion de version** : Git & GitHub
