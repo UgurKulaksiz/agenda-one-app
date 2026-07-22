@@ -56,8 +56,8 @@
             <div class="footer-right">
                 <div class="language-switcher">
                     <select class="language-select" onchange="changeLanguage(this.value)">
-                        <option value="fr" <?php echo $lang === 'fr' ? 'selected' : ''; ?>>FR</option>
-                        <option value="en" <?php echo $lang === 'en' ? 'selected' : ''; ?>>EN</option>
+                        <option value="fr" <?php echo $lang === 'fr' ? 'selected' : ''; ?>>Français</option>
+                        <option value="en" <?php echo $lang === 'en' ? 'selected' : ''; ?>>English</option>
                     </select>
                 </div>
             </div>

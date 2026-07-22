@@ -313,15 +313,14 @@ textarea.event-input:focus {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
     gap: 15px;
-    flex-wrap: wrap;
 }
 
 .footer-center {
-    flex: 1;
+    grid-column: 2;
     text-align: center;
 }
 
@@ -331,7 +330,8 @@ textarea.event-input:focus {
 }
 
 .footer-right {
-    margin-left: auto;
+    grid-column: 3;
+    justify-self: end;
 }
 
 .language-switcher {
